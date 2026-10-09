@@ -47,3 +47,9 @@ worlds:
 - Test on a backup/staging server first, especially alongside plugins that rewrite item metadata.
 - The Paper API dependency is pinned to `26.1.2.build.72-stable`, which was resolvable in the supplied Maven log.
 - This archive contains source; I cannot execute a Java 25 Maven build in this environment, so run the build command above to verify it locally.
+
+## Automatic GitHub builds
+
+The repository includes `.github/workflows/build.yml`. GitHub Actions automatically runs `mvn clean package` with Java 25 on every push (including commits pushed to a branch), on pull requests, and when manually started from the Actions tab. If the build succeeds, the plugin JAR is uploaded as an artifact named `PerWorldAttributes` for 14 days.
+
+To enable it, push this project to a GitHub repository. Open the repository's **Actions** tab to view build results and download the JAR from a successful workflow run.
