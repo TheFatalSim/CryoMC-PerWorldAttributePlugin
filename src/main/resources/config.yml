@@ -1,0 +1,26 @@
+# PerWorldAttributes configuration for Paper 26.1.2
+# World names must exactly match the server's world names.
+
+worlds:
+  world:
+    # Item modifier attributes listed here are disabled on items while those items are
+    # in a player's inventory in this world. Unlisted item attributes remain unchanged.
+    # Valid attribute names are Minecraft registry names, such as movement_speed,
+    # water_movement_efficiency, attack_damage, attack_speed, armor, and armor_toughness.
+    disabled-modifier-attributes:
+      - movement_speed
+      - water_movement_efficiency
+
+    # These are player BASE VALUES, not additive bonuses.
+    attributes:
+      max_health: 20.0
+      # movement_speed: 0.2
+
+  # Example for another world:
+  # arena:
+  #   disabled-modifier-attributes:
+  #     - movement_speed
+  #   attributes:
+  #     max_health: 20.0
+
+# Worlds not listed above use normal item modifiers and baseline player attributes.

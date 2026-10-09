@@ -1,0 +1,17 @@
+name: PerWorldAttributes
+version: 1.0.1
+main: com.cryomc.perworldattributes.PerWorldAttributes
+api-version: '26.1.2'
+description: Configure player base attributes and suppress item attribute modifiers per world.
+author: CryoMC
+
+commands:
+  pwa:
+    description: PerWorldAttributes administration command.
+    usage: /pwa reload
+    permission: perworldattributes.reload
+
+permissions:
+  perworldattributes.reload:
+    description: Allows reloading PerWorldAttributes configuration.
+    default: op
